@@ -1,0 +1,23 @@
+node_modules
+dist
+.env
+.env.*
+!.env.example
+.circle
+recovery_file*
+traces.jsonl
+console.jsonl
+contracts/out
+contracts/cache
+.vercel
+*.log
+
+# test output
+test-results/
+playwright-report/
+dist-fake/
+
+# misc
+.DS_Store
+*.key
+*.pem

@@ -1,0 +1,12 @@
+external_id,display_name,email
+001,Somchai Jaidee,somchai@example.com
+002,Suda Rungrueang,suda@example.com
+003,Anan Meechai,
+004,Malee Suksan,malee@example.com
+005,Niran Thongdee,niran@example.com
+006,Pim Chaiyo,pim@example.com
+007,Kittipong Sawat,
+008,Ratree Boonmee,ratree@example.com
+008,Duplicate Id Row,dup@example.com
+009,Wichai Prasert,not-an-email
+010,Napat Srisuk,napat@example.com

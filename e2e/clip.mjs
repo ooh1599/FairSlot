@@ -1,0 +1,10 @@
+import { chromium } from '@playwright/test'
+const [url, out, y, h] = process.argv.slice(2)
+const browser = await chromium.launch({ args: ['--disable-gpu', '--disable-dev-shm-usage', '--no-sandbox'] })
+const page = await browser.newPage({ viewport: { width: 1280, height: 900 }, deviceScaleFactor: 2 })
+await page.goto(url)
+await page.waitForTimeout(3000)
+const fonts = await page.evaluate(async () => { await document.fonts.ready; return [...document.fonts].map((f) => f.family + ':' + f.status).join(', ') })
+console.log(fonts)
+await page.screenshot({ path: out, clip: { x: 60, y: Number(y), width: 700, height: Number(h) }, fullPage: true })
+await browser.close()
